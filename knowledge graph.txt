@@ -1,0 +1,70 @@
+create (johnsmith:johnsmith {name:'John Smith'}),(jonsnow:jonsnow {name:'John Snow'}),(katherine:katherine {name:'Katherine'}),(kavya:kavya {name:'Kavya'}),(alex:alex {name:'Alex'}),(clayjensen:clayjensen {name:'Clay Jensen'}),
+
+(surgery:operations {name:'Surgery'}),(surgery1:operations {name:'Surgery1'}),(drinking:drinking {name:'Drinking'}),(smoking:smoking {name:'Smoking'}),(vaccine:vaccine {name:'Vaccine'}),(vaccine1:vaccine {name:'Vaccine1'}),(vaccine2:vaccine {name:'Vaccine2'}),(vaccine3:vaccine {name:'Vaccine3'}),(allergy:allergy {name:'Allergy'}), (allergy1:allergy {name:'Allergy1'}),(allergy2:allergy {name:'Allergy2'}), (disease:disease {name:'Disease'}),(disease1: disease {name:'Disease1'}),(disease2: disease {name:'Disease2'}),
+
+(patient_id:patient_id {name:'Patient_ID'}),(gender:gender {name:'Gender'}),(nationality:nationality {name:'Nationality'}),(occupation:occupation {name:'Occupation'}),(bloodpressure:bloodpressure {name:'Blood Pressure'}),
+
+(a:age {name:'35_yrs'}),(b:age {name:'34_yrs'}),(c:age {name:'20_yrs'}),(d:age {name:'26_yrs'}),(e:age {name:'35_yrs'}),(f:age {name:'24_yrs'}),
+
+(johnsmith)-[:Age]->(a),(jonsnow)-[:Age]->(b),(katherine)-[:Age]->(c),(Kavya)-[:Age]->(d),(alex)-[:Age]->(e),(clayjensen)-[:Age]->(f),
+
+(m:bloodgroup {name:'O_+ve'}),(n:bloodgroup {name:'O_+ve'}),(o:bloodgroup {name:'A_+ve'}),(p:bloodgroup {name:'A_-ve'}),(q:bloodgroup {name:'O_+ve'}),(r:bloodgroup {name:'B_+ve'}),
+
+(johnsmith)-[:Blood_Group]->(m),(jonsnow)-[:Blood_Group]->(n),(katherine)-[:Blood_Group]->(o),(kavya)-[:Blood_Group]->(p),(alex)-[:Blood_Group]->(q),(clayjensen)-[:Blood_Group]->(r),
+
+(johnsmith)-[:Software_Developer]->(occupation),(jonsnmow)-[:Electrical_Engineer]->(Surgeries),(katherine)-[:CFO]->(occupation),(kavya)-[:Tech_Wizard]->(occupation),(Alex)-[:Night_Manager]->(occupation),(clayjensen)-[:Enterprneur]->(occupation),
+
+(johnsmith)-[:Male]->(gender), (jonsnow)-[:Male]->(gender),(katherine)-[:Female]->(gender),(kavya)-[:Female]->(gender),(Alex)-[:Male]->(gender),(clayjensen)-[:Entrepreneur]->(gender),
+
+(g:height {name:'160_cm'}),(h:height {name:'150_cm'}),(i:height {name:'155_cm'}),(j:height {name:'170_cm'}),(k:height {name:'149_cm'}),(l:height {name:'160_cm'}),
+
+(johnsmith)-[:Height]->(g),(jonsnow)-[:Height]->(h), (katherine)-[:Height]->(i),(kavya)-[:Height]->(j),(alex)-[:Height]->(k), (clayjensen)-[:Height]->(l),
+
+(s:weight {name:'80_kg'}),(t:weight {name:'70_kg'}),(u:weight {name:'60_kg'}),(v:weight {name:'50_kg'}),(w:weight {name:'69_kg'}),(x:weight {name:'80_kg'}),
+
+(johnsmith)-[:Weight]->(s),(jonsnow)-[:Weight]->(t), (katherine)-[:Weight]->(u), (Kavya)-[:Weight]->(v), (alex)-[:Weight]->(w), (clayjensen)-[:Weight]->(x),
+
+(y:bmi {name:'31_kg/m²'}),(z:bmi {name:'31_kg/m²'}),(a1:bmi {name:'25_kg/m²'}),(b1:bmi {name:'22_kg/m²'}),(c1:bmi {name:'31_kg/m²'}),(d1:bmi {name:'31_kg/m²'}),
+
+(johnsmith)-[:BMI]->(y), (jonsnow)-[:BMI]->(z), (katherine)-[:BMI]->(a1), (kavya)-[:BMI]->(b1), (Alex)-[:BMI]->(c1), (clayjensen)-[:BMI]->(d1),
+
+(johnsmith)-[:No]->(smoking),(jonsnow)-[:Yes]->(smoking),(katherine)-[:No]->(smoking),(kavya)-[:No]->(smoking),(Alex)-[:Yes]->(smoking),(clayjensen)-[:No]->(smoking),
+
+(johnsmith)-[:No]->(drinking),(jonsnow)-[:Yes]->(drinking),(katherine)-[:No]->(drinking),(kavya)-[:No]->(drinking),(alex)-[:No]->(drinking),(clayjensen)-[:Yes]->(drinking),
+
+(johnsmith)-[:Peanut]->(allergy),(jonsnow)-[:Strawberry]->(allergy),
+(katherine)-[:dust]->(allergy),(kavya)-[:Peanut]->(allergy),(alex)-[:Skin_allergy]->(allergy),(clayjensen)-[:Rhinitis]->(allergy),
+
+(johnsmith)-[:Dust]->(allergy1),(jonsnow)-[:Almonds]->(allergy1),(katherine)-[:Chocolate]->(allergy1),(kavya)-[:Flowers]->(allergy1),(alex)-[:Dust]->(allergy1),(clayjensen)-[:Anaphylaxis]->(allergy1),
+
+(johnsmith)-[:Pollen]->(allergy2),(josnow)-[:Almonds]->(allergy2),(katherine)-[:Pollen]->(allergy2),(kavya)-[:pollen]->(allergy2),(alex)-[:Milk]->(allergy2),(clayjensen)-[:pollen]->(allergy2),
+
+(johnsmith)-[:American]->(nationality),(jonsnow)-[:Winter_Fell]->(nationality),(katherine)-[:Kingslanding]->(nationality),
+(kavya)-[:Indian]->(nationality),(alex)-[:African]->(nationality),(clayjensen)-[:Canadian]->(nationality),
+
+(johnsmith)-[:Rabies_vaccine]->(vaccine),(jonsnow)-[:polio]->(vaccine),(katherine)-[:Mumps]->(vaccine),(kavya)-[:Tetannus]->(vaccine),(alex)-[:Rotavirus]->(vaccine),(clayjensen)-[:polio]->(vaccine),
+
+(johnsmith)-[:Covaxin]->(vaccine1),(jonsnow)-[:Covishield]->(vaccine1),(katherine)-[:covishield]->(vaccine1),(kavya)-[:Covaxin]->(vaccine1),(alex)-[:Covaxin]->(vaccine1),(clayjensen)-[:Sputnik]->(vaccine1),
+
+(johnsmith)-[:Flu_shot]->(vaccine2),(jonsnow)-[:BCG]->(vaccine2),(katherine)-[:Flu_shot]->(vaccine2),(kavya)-[:Polio]->(vaccine2),(alex)-[:Pneumococcal]->(vaccine2),(clayjensen)-[:Flu_shot]->(vaccine2),
+
+(johnsmith)-[:Covaxin_Booster]->(vaccine3),(jonsnow)-[:Covishield_Booster]->(vaccine3),(katherine)-[:covishield_booster]->(vaccine3),(kavya)-[:Covaxin_booster]->(vaccine3),(alex)-[:Covaxin_booster]->(vaccine3),(clayjensen)-[:Sputnik_booster]->(vaccine3),
+
+(johnsmith)-[:Kidney_Transplant]->(surgery),(jonsnow)-[:Kidney_Transplant]->(surgery),(katherine)-[:General_Surgery]->(surgery),(kavya)-[:Epilepsy]->(surgery),(alex)-[:Neck_Surgery]->(surgery),(clayjensen)-[:Prostate_Surgery]->(surgery),
+
+(johnsmith)-[:Cataract]->(surgery1),(jonsnow)-[:Heart_Surgery]->(surgery1),(katherine)-[:Endicrine_surgery]->(surgery1),(kavya)-[:Cataract]->(surgery1),(alex)-[:Bariartic_Surgery]->(surgery1),(clayjensen)-[:Cataract]->(surgery1),
+
+(johnsmith)-[:Aids]->(disease),(jonsnow)-[:Dengue]->(disease),(katherine)-[:Babesiosis]->(disease),(kavya)-[:AIDS]->(disease),(alex)-[:chicken_pox]->(disease),(clayjensen)-[:Dengue]->(disease),
+
+(johnsmith)-[:Artheritis]->(disease1),(jonsnow)-[:COPD]->(disese1),(katherine)-[:Malaria]->(disease1),(kavya)-[:Flu]->(disease1),(alex)-[:Hemorrhoids]->(disease1),(clayjensen)-[:Mononucleosis]->(disease1),
+
+(johnsmith)-[:Tuberculosis]->(disease2),(jonsnow)-[:Tuberculosis]->(disease2),
+(katherine)-[:Dengue]->(disease2),(kavya)-[:Tuberculosis]->(disease2),(alex)-[:Tuberculosis]->(disease2),(clayjensen)-[:Conjunctivitis]->(disease2),
+
+(johnsmith)-[:SIM35ABC]->(patient_id),(jonsnow)-[:JOH35ABC]->(patient_id),(katherine)-[:SRI35ABC]->(patient_id),(kavya)-[:KAV35ABC]->(patient_id),(alex)-[:ALE35ABC]->(patient_id),(clayjensen)-[:CLA35ABC]->(patient_id),
+
+(e1:contact {name:'123456789'}),(f1:contact {name:'987654321'}),(g1:contact {name:'789456123'}),(h1:contact {name:'987456321'}),(i1:contact {name:'321456987'}),(j1:contact {name:'456123789'}),
+
+(johnsmith)-[:Contact]->(e1),(jonsnow)-[:Contact]->(f1),(katherine)-[:Contact]->(g1),(kavya)-[:Contact]->(h1),(alex)-[:Contact]->(i1),(clayjensen)-[:Contact]->(j1),
+
+(johnsmith)-[:Normal]->(bloodpressure),(jonsnow)-[:High]->(bloodpressure),(katherine)-[:Normal]->(bloodpressure),(kavya)-[:Low]->(bloodpressure),(alex)-[:High]->(bloodpressure),(clayjensen)-[:Normal]->(bloodpressure)
